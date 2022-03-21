@@ -21,7 +21,7 @@ setup(
     description="Connect to the last started kernel or by connection file.",
     long_description=long_description,
     long_description_content_type='text/markdown',
-    version="0.1.2",
+    version="0.1.3",
     packages=['jupyter_existing_provisioner'],
     include_package_data=True,
     project_urls={

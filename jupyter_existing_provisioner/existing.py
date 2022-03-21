@@ -18,7 +18,8 @@ class ExistingProvisioner(KernelProvisionerBase):
         # Connect to existing kernel
         connection_file = ""
         if "EXISTING_CONNECTION_FILE" in os.environ:
-            connection_file = os.environ["EXISTING_CONNECTION_FILE"]
+            kernel_file = os.environ["EXISTING_CONNECTION_FILE"]
+            connection_file = find_connection_file(kernel_file)
         else:
             # find last started kernel-*.json in the runtime dir
             connection_file = find_connection_file()
