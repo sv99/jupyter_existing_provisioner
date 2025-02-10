@@ -4,7 +4,7 @@ This package register existing_provisioner endpoint for attach to the running ju
 
     pip install jupyter_existing_provisioner
     # check endpoint
-    jupyter pyxll install
+    jupyter kernelspec provisioners
 
 Based on [PyXLL-Jupyter](https://github.com/pyxll/pyxll-jupyter).
 

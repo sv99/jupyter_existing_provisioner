@@ -8,3 +8,5 @@ This package register existing_provisioner endpoint for attach to the running ju
     jupyter kernelspec provisioners
 """
 from .existing import ExistingProvisioner
+
+VERSION = "0.1.4"

@@ -70,6 +70,7 @@ class MainWindow(QtWidgets.QMainWindow):
         self.jupyter_widget.kernel_client.stop_channels()
         self.jupyter_widget.kernel_manager.shutdown_kernel()
 
+
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     window = MainWindow()

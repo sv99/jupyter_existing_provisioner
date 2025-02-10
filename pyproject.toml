@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "jupyter_existing_provisioner/__init__.py"
+
+[project]
+name = "jupyter_existing_provisioner"
+dynamic = ["version"]
+authors = [
+    {name = "sv99", email = "sv99@inbox.ru"},
+]
+description = "Connect to the last started kernel or by connection file."
+readme = "README.md"
+license = {file = "LICENSE.txt"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+dependencies = [
+    "jupyter_client>=7.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/sv99/jupyter_existing_provisioner"
+Issues = "https://github.com/sv99/jupyter_existing_provisioner/issues"
+
+[project.entry-points."jupyter_client.kernel_provisioners"]
+existing-provisioner = "jupyter_existing_provisioner:ExistingProvisioner"
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+  "embed_qtconsole.py",
+]
